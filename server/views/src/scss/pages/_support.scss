@@ -1,0 +1,175 @@
+@import
+    '../base/_base',
+    '../base/_reset';
+
+@include respond-to('>small') {
+    .banner-container {
+        width: 100%;
+        height: 690px;
+        .banner {
+            width: inherit;
+            max-height: 690px;
+            overflow: hidden;
+            text-align: center;
+            img {
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .support-container {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
+        .support-library {
+            text-align: center;
+            height: 400px;
+            .library-title {
+                color: $blue;
+                padding-top: 40px;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .library {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .library-item {
+                    padding-top: 30px;
+                    width: 240px;
+                    height: 224px;
+                }
+                .library-item-icon {
+                    height: 70px;
+                    width: 70px;
+                    overflow: hidden;
+                }
+                .library-item-title {
+                    margin-top: 30px;
+                    font-size: 20px;
+                }
+                .library-item-text {
+                    margin-top: 30px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .support-sale {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            .sale-title {
+                text-align: center;
+                color: $blue;
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .sale-group {
+                margin-top: 60px;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                .sale-item {
+                    cursor: pointer;
+                }
+                .sale-item-icon {
+                    height: 70px;
+                    width: 70px;
+                    overflow: hidden;
+                }
+                .sale-item-title {
+                    margin-top: 20px;
+                    font-size: 20px;
+                }
+            }
+            .sale-text {
+                width: 1190px;
+                background-color: $grey;
+                padding: 0 6%;
+                width: 100%;
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: all 0.5s ease-in-out;
+                &.active {
+                    padding-top: 20px;
+                    opacity: 1;
+                    height: 200px;
+                }
+            }
+        }
+    }
+    .support-container .support-sale .sale-group .sale-item.active i,
+    .support-container .support-sale .sale-group .sale-item.active div {
+        color: $blue;
+    }
+    .mobile-support-sale {
+        display: none;
+    }
+}
+
+@include respond-to('small') {
+    .banner-container {
+        margin-top: 55px;
+        height: auto;
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .support-container {
+        box-sizing: border-box;
+        width: 100%;
+        .support-library {
+            text-align: center;
+            .library-title {
+                display: none;
+            }
+            .library {
+                .library-item {
+                    display: block;
+                    box-sizing: border-box;
+                    margin: 60px 20px 0 20px;
+                    height: 180px;
+                    border-bottom: 1px solid #ccc;
+                }
+                .library-item-icon {
+                    height: 70px;
+                    width: 70px;
+                    overflow: hidden;
+                }
+                .library-item-title {
+                    color: $blue;
+                    margin-top: 30px;
+                    font-size: 18px;
+                }
+                .library-item-text {
+                    display: none;
+                }
+            }
+        }
+        .support-sale {
+            display: none;
+        }
+        .mobile-support-sale {
+            .sale-group {
+                box-sizing: border-box;
+                height: 200px;
+                margin: 10px 20px;
+                text-align: center;
+                border-bottom: 1px solid #ccc;
+                overflow: hidden;
+                .sale-title {
+                    font-size: 30px;
+                    font-weight: 700;
+                    padding: 10px 0 10px 0;
+                }
+            }
+        }
+    }
+}

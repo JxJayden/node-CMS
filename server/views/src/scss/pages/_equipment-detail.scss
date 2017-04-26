@@ -1,0 +1,335 @@
+@import
+    '../base/_base',
+    '../base/_reset';
+
+@import
+    '../layout/_choose';
+
+@import
+    '../components/_dialog';
+
+.content-container {
+    width: 100%;
+    .head-container {
+        width: 100%;
+        background-color: $grey;
+    }
+    .main-container {
+        width: 100%;
+    }
+}
+
+@include respond-to('large') {
+    .head-container {
+        height: 164px;
+        .head {
+            width: 1190px;
+            height: inherit;
+            margin: 0 auto;
+            .head-title {
+                padding-top: 48px;
+                padding-left: 50px;
+                line-height: 25px;
+                font-size: 30px;
+                color: $blue;
+            }
+            .breadcrumbs {
+                padding: 10px 0 0 50px;
+                font-size: 16px;
+                span {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    .main-container {
+        .main {
+            width: 1190px;
+            margin: 0 auto;
+            .index-intro {
+                text-align: center;
+                height: 400px;
+                .index-intro-title {
+                    color: $blue;
+                    padding-top: 40px;
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+                .index-intro-titlemobile {
+                    display: none;
+                }
+                .index-card {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .index-card-item {
+                        padding-top: 40px;
+                        width: 240px;
+                        height: 224px;
+                    }
+                    .index-intro-icon {
+                        width: 70px;
+                        height: 70px;
+                        margin: 0 auto;
+                        overflow: hidden;
+                    }
+                    .index-card-itemtitle {
+                        margin-top: 30px;
+                        font-size: 20px;
+                    }
+                    .index-card-itemtext {
+                        margin-top: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .project-item {
+                width: 1190px;
+                height: 519px;
+                margin: 0 auto;
+                padding-bottom: 73px;
+                .info {
+                    width: auto;
+                    float: left;
+                    .title {
+                        text-align: left;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 28px;
+                        font-weight: 500;
+                        width: 373px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        color: $blue;
+                    }
+                    .ctx {
+                        margin-top: 18px;
+                        height: 378px;
+                        width: 373px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 18;
+                        line-height: 28.8px;
+                        white-space: pre-wrap;
+                    }
+                }
+                .img-container {
+                    float: right;
+                    width: 655px;
+                    height: 446px;
+                    background-color: $grey;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .big-pic-wrapper {
+                max-width: 1190px;
+                overflow: hidden;
+                text-align: center;
+            }
+            .big-pic {
+                width: inherit;
+            }
+        }
+    }
+}
+
+@include respond-to('medium') {
+    .head {
+        margin-top: 55px;
+        width: 100%;
+        height: 56.4px;
+        line-height: 56.4px;
+        text-align: center;
+        .head-title {
+            color: $blue;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .breadcrumbs {
+            display: none;
+        }
+    }
+    .main {
+        width: 100%;
+        .index-intro {
+            text-align: center;
+            height: 400px;
+            .index-intro-title {
+                color: $blue;
+                padding-top: 40px;
+                font-size: 28px;
+                font-weight: 700;
+            }
+            .index-intro-titlemobile {
+                display: none;
+            }
+            .index-card {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .index-card-item {
+                    padding-top: 80px;
+                    width: 240px;
+                    height: 224px;
+                }
+                .index-intro-icon {
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                }
+                .index-card-itemtitle {
+                    margin-top: 40px;
+                    font-size: 20px;
+                }
+                .index-card-itemtext {
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .project-item {
+            box-sizing: border-box;
+            width: 96%;
+            margin: 0 auto;
+            padding-bottom: 73px;
+            .info {
+                width: 50%;
+                float: left;
+                padding-right: 20px;
+                box-sizing: border-box;
+                .title {
+                    text-align: left;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 28px;
+                    font-weight: 500;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    color: $blue;
+                }
+                .ctx {
+                    margin-top: 18px;
+                    height: 60%;
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 18;
+                    line-height: 28.8px;
+                }
+            }
+            .img-container {
+                box-sizing: border-box;
+                position: relative;
+                height: 60%;
+                right: 0;
+                width: 50%;
+                overflow: hidden;
+                img {
+                    width: 98%;
+                }
+            }
+        }
+    }
+}
+
+@include respond-to('small') {
+    .head {
+        margin-top: 55px;
+        width: 100%;
+        height: 56.4px;
+        line-height: 56.4px;
+        text-align: center;
+        .head-title {
+            color: $blue;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .breadcrumbs {
+            display: none;
+        }
+    }
+    .main {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+        .index-intro {
+            text-align: center;
+            .index-intro-titlemobile {
+                color: $blue;
+                padding-top: 40px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .index-intro-title {
+                display: none;
+            }
+            .index-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .index-card-item {
+                    padding-top: 40px;
+                    width: 100%;
+                    height: 224px;
+                    border-bottom: 1px solid #ccc;
+                }
+                .index-intro-icon {
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                }
+                .index-card-itemtitle {
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+                .index-card-itemtext {
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .project-item {
+            width: 100%;
+            margin: 0 auto;
+            margin: 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            .info {
+                width: inherit;
+                .title {
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    width: inherit;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    color: $blue;
+                }
+                .ctx {
+                    margin-top: 20px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 18;
+                    line-height: 28.8px;
+                }
+            }
+            .img-container {
+                display: none;
+            }
+        }
+    }
+}

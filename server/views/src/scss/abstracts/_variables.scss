@@ -1,0 +1,19 @@
+// Predefined Break-points
+$mediaMaxWidth: 1190px;
+$mediaMinWidth: 425px;
+
+$breakpoints: (
+  "large": "(min-width: 1191px)",
+  "<large": "(max-width: 1190px)",
+  "medium": "(min-width: 426px) and (max-width: 1190px)",
+  "small": "(max-width: 425px)",
+  ">small": "(min-width: 426px)",
+);
+
+$fontColor: #4a4a4a;
+$lightFontColor: #9B9B9B;
+$blue: #44a8f2;
+$blueHover: #3d96d8;
+$blueActive: #3a8ac5;
+$grey: #f7f8f9;
+$white: #fff;

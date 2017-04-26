@@ -18,7 +18,7 @@ app.on('error', function(err, ctx) {
 var router = require('koa-router')();
 
 var template=require('art-template');
-template.config('base','views');
+template.config('base','views-test');
 template.config('encoding','utf-8');
 template.config('extname','.html');
 app.context.render=template;
@@ -53,6 +53,6 @@ app.use(router.routes());
 app.use(router.allowedMethods())
 
 
-app.listen(3001, function() {
-    console.log("listen on 3001");
+app.listen(3002, function() {
+    console.log("listen on 3002");
 });

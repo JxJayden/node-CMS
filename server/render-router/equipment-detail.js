@@ -16,7 +16,7 @@ module.exports = function*(next) {
         });
         var info=yield db.Product.findOne({ _id: _id },'name englishName number').exec();
         var chinese = this.query.language ? false : true;
-        var title = chinese?"新士域保龄球 | 一站式保龄产业供应商":"XSY Bowling Equipment and Parts Supplier";
+        var title=chinese?"你的标题":"your title";
         var data = {
             info,
             data:data[_id],

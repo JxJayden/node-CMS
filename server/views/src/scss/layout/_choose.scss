@@ -1,0 +1,297 @@
+// 整套设备详情页的组合选择部分
+@include respond-to('large') {
+    .choose-title {
+        font-size: 44px;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        color: $blue;
+    }
+    .choose-card-area {
+        margin: 82px auto 0 auto;
+        width: 100%;
+        height: 800px;
+    }
+    .choose-card-item {
+        box-sizing: border-box;
+        z-index: 10;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+        position: relative;
+        float: left;
+        width: 28%;
+        height: 745px;
+        background-color: transparent;
+        border: 1px solid #dbdbdd;
+        margin-left: -1px;
+        margin-bottom: 40px;
+        &.active {
+            z-index: 100;
+            border: 1px solid $blue;
+            box-shadow: 0 0 20px rgba(68, 168, 242, 0.5);
+            width: 40%;
+            height: 760px;
+            .choose-card-title {
+                left: -1px;
+                background-color: $blue;
+                height: 185px;
+                line-height: 185px;
+                color: $white;
+                top: -15px;
+                margin-right: -2px;
+                font-size: 28px;
+            }
+        }
+    }
+    .choose-card-title {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+        height: 170px;
+        line-height: 170px;
+        top: 0;
+        position: relative;
+        left: 0;
+        right: -1px;
+        z-index: 1;
+        font-size: 24px;
+        text-align: center;
+        color: $fontColor;
+        background-color: $grey;
+        font-weight: 700;
+    }
+    .choose-card-content {
+        height: 510px;
+        position: absolute;
+        width: 100%;
+        top: 170px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        ul {
+            width: 100%;
+            font-size: 16px;
+            margin-top: 47px;
+            margin-bottom: 47px;
+            li {
+                margin-bottom: 30px;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+        }
+    }
+    .choose-card-item-title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .choose-card-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        a {
+            display: inline-block;
+            width: 220px;
+            height: 40px;
+            line-height: 40px;
+            color: $white;
+            background: $blue;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-bottom: 10px;
+            text-overflow: ellipsis;
+            &:hover {
+                background-color: $blueHover;
+                color: $white;
+            }
+        }
+    }
+}
+
+@include respond-to('medium') {
+    .choose-title {
+        font-size: 32px;
+        width: 96%;
+        text-align: center;
+        font-weight: 500;
+        color: $blue;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .choose-card-area {
+        margin: 82px auto 0 auto;
+        width: 96%;
+        height: 800px;
+    }
+    .choose-card-item {
+        box-sizing: border-box;
+        z-index: 10;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+        position: relative;
+        float: left;
+        width: 30%;
+        height: 600px;
+        background-color: transparent;
+        border: 1px solid #dbdbdd;
+        margin-left: -1px;
+        margin-bottom: 40px;
+        &.active {
+            z-index: 100;
+            border: 1px solid $blue;
+            box-shadow: 0 0 20px rgba(68, 168, 242, 0.5);
+            width: 36%;
+            height: 615px;
+            .choose-card-title {
+                left: -1px;
+                background-color: $blue;
+                height: 185px;
+                line-height: 185px;
+                color: $white;
+                top: -15px;
+                margin-right: -2px;
+            }
+        }
+    }
+    .choose-card-title {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1), z-index 0s 0.12s;
+        height: 170px;
+        line-height: 170px;
+        top: 0;
+        position: relative;
+        left: 0;
+        right: -1px;
+        z-index: 1;
+        font-size: 26px;
+        text-align: center;
+        color: $fontColor;
+        background-color: $grey;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .choose-card-content {
+        height: 376px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        top: 170px;
+        ul {
+            width: 100%;
+            font-size: 16px;
+            margin-top: 47px;
+            margin-bottom: 47px;
+            li {
+                margin-bottom: 30px;
+                margin-left: 20px;
+            }
+        }
+    }
+    .choose-card-item-title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .choose-card-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        a {
+            display: inline-block;
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+            color: $white;
+            background: $blue;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &:hover {
+                background-color: $blueHover;
+                color: $white;
+            }
+        }
+    }
+}
+
+@include respond-to('small') {
+    .choose {
+        padding-top: 20px;
+    }
+    .choose-title {
+        display: none;
+    }
+    .choose-card-item {
+        box-sizing: border-box;
+        z-index: 10;
+        position: relative;
+        width: 273px;
+        height: 634px;
+        background-color: transparent;
+        border: 1px solid #dbdbdd;
+        margin: 20px auto;
+        border: 1px solid $blue;
+        box-shadow: 0 0 20px rgba(68, 168, 242, 0.5);
+    }
+    .choose-card-title {
+        height: 120px;
+        line-height: 120px;
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: $blue;
+        color: $white;
+    }
+    .choose-card-content {
+        height: 450px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        ul {
+            width: 100%;
+            overflow: hidden;
+            font-size: 16px;
+            margin: 30px auto;
+            li {
+                width: 90%;
+                margin: 20px auto;
+            }
+        }
+    }
+    .choose-card-item-title {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .choose-card-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        a {
+            display: inline-block;
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+            color: $white;
+            background: $blue;
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            &:active {
+                background-color: $white;
+                color: $blue;
+            }
+        }
+    }
+}

@@ -1,16 +1,7 @@
-{{include "../public/html-header"}}
+{{include "./public/html-header"}}
 <link href="/css/search.min.css" rel="stylesheet">
-<link rel="stylesheet" href="//ohnpdrepj.bkt.clouddn.com/blueimp-gallery-change.min.css"> {{include "./nav"}}
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-</div>
-
+<link rel="stylesheet" href="//ohnpdrepj.bkt.clouddn.com/magnific-popup.min.css">
+{{include "./nav"}}
 <div class="content-container" id="search-content">
 </div>
 <script id="search-template" type="text/html">
@@ -46,7 +37,7 @@
             </div>
         </div>
         <div class="search-content">
-            <input class="search" type="search" value="<%keywords%>" placeholder="{{chinese ? navBar.placeholder.content : navBar.placeholder.contentEn }}">
+            <input class="search" value="<%keywords%>" placeholder="{{chinese ? navBar.placeholder.content : navBar.placeholder.contentEn }}">
             <a href="javascript:void(0)" class="iconfont to-search">&#xe651;</a>
         </div>
         <div class="main-container">
@@ -62,31 +53,31 @@
                 <div class="card" id="product">
                     <%each productList%>
                         <div class="card-item">
-                            <span class="img-container">
+                            <span class="card-img-container">
                                 <%if $value.media && $value.media.length > 0%>
                                     <img src="<%$value.media[0].link%>" alt="<%chinese ? $value.media[0].alt : $value.media[0].altEn%>">
                                 <%else%>
                                     <img src="http://ohnpdrepj.bkt.clouddn.com/%E9%BB%98%E8%AE%A4%E4%BA%A7%E5%93%81.png" alt="default iamge">
                                 <%/if%>
                             </span>
-                            <div class="info-container">
-                                <div class="number">
+                            <div class="card-info-container">
+                                <div class="card-number">
                                     <%$value.number ? $value.number : "暂无编号"%>
                                 </div>
-                                <div class="more iconfont">&#xe793;</div>
-                                <div class="name">
+                                <div class="card-more iconfont">&#xe793;</div>
+                                <div class="card-name">
                                     <%chinese ? $value.name : $value.englishName%>
                                 </div>
-                                <div class="star iconfont" id="star-off" data-id="<%$value._id.toString()%>">&#xe754;</div>
-                                <div class="star star-hide iconfont" id="star-on" data-id="<%$value._id.toString()%>">&#xe6bc;</div>
+                                <div class="card-star iconfont" id="star-off" data-id="<%$value._id.toString()%>">&#xe754;</div>
+                                <div class="card-star card-card-star-hide iconfont" id="star-on" data-id="<%$value._id.toString()%>">&#xe6bc;</div>
                                 <%if $value.media && $value.media.length > 0%>
-                                    <div class="img-more"><%chinese ? "点击查看大图" : "Click to view more"%>
+                                    <div class="card-img-more"><%chinese ? "点击查看大图" : "Click to view more"%>
                                         <%each $value.media%>
                                             <a href="<%$value.link%>"></a>
                                         <%/each%>
                                     </div>
                                 <%else%>
-                                    <div class="img-more"><%chinese ? "点击查看大图" : "Click to view more"%>
+                                    <div class="card-img-more"><%chinese ? "点击查看大图" : "Click to view more"%>
                                         <a href="http://ohnpdrepj.bkt.clouddn.com/%E9%BB%98%E8%AE%A4%E4%BA%A7%E5%93%81.png"></a>
                                     </div>
                                 <%/if%>
@@ -94,9 +85,9 @@
                             <div class="card-cover card-cover-hide">
                                 <div class="card-cover-title">
                                     <%chinese ? $value.name : $value.englishName%>
-                                        <span class="iconfont close-card-cover">&#xe6cc;</span>
+                                        <span class="iconfont card-close-cover">&#xe6cc;</span>
                                 </div>
-                                <div class="des">
+                                <div class="card-des">
                                     <%chinese ? $value.description : $value.englishDescription%>
                                 </div>
                             </div>
@@ -120,6 +111,6 @@
     <%/if%>
 </script>
 {{include "./footer"}}
-<script src="//ohnpdrepj.bkt.clouddn.com/blueimp-gallery.min.js"></script>
+<script src="//ohnpdrepj.bkt.clouddn.com/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript" src="/js/search.min.js"></script>
-{{include "../public/html-footer"}}
+{{include "./public/html-footer"}}

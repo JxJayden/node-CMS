@@ -1,0 +1,89 @@
+@include respond-to('large') {
+    .footer {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 6%;
+        height: 140px;
+        background-color: $grey;
+        .company {
+            box-sizing: border-box;
+            float: left;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            padding-right: 20px;
+            border-right: 1px solid #979797;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 40px;
+            .company-title {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .company-intro {
+                padding-top: 14px;
+                font-size: 14px;
+            }
+        }
+        .other {
+            box-sizing: border-box;
+            float: left;
+            width: 48%;
+            height: 100%;
+            padding-left: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+    .footer .other .address,
+    .footer .other .friendlink {
+        margin-bottom: 12px;
+    }
+}
+
+@include respond-to('<large') {
+    .footer {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        background-color: $grey;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .company {
+            width: inherit;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .company-title {
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .company-intro {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                padding-top: 20px;
+                font-size: 14px;
+            }
+        }
+        .other {
+            padding-top: 6px;
+            width: inherit;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-weight: 400;
+            .mobile-hidden {
+                display: none;
+            }
+            .address {
+                padding-bottom: 6px;
+            }
+        }
+    }
+    .footer .other .friendlink,
+    .footer .other .copyright {
+        display: inline-block;
+    }
+}

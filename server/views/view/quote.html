@@ -1,4 +1,4 @@
-{{include "../public/html-header"}}
+{{include "./public/html-header"}}
 <link href="/css/quote.min.css" rel="stylesheet">
 {{include "./nav"}}
 <div class="content-container">
@@ -546,7 +546,7 @@
             <div class="product-wrapper">
                 <p class="wrapper-title">{{chinese ? "产品询价" : "Product Quotation"}}</p>
                 <div id="quote-list"></div>
-                <div class="ok"><button class="submit-quote">{{chinese ? "提交" : "Submit"}}</button></div>
+                <div class="submit-quote-button"><button class="submit-quote">{{chinese ? "提交" : "Submit"}}</button></div>
             </div>
         </div>
     </div>
@@ -562,10 +562,10 @@
                     <img src="http://ohnpdrepj.bkt.clouddn.com/%E9%BB%98%E8%AE%A4%E4%BA%A7%E5%93%81.png" class="product-img">
                 <%/if%>
             </div>
-            <div class="div">
+            <div class="product-item-content">
                 <div class="product-number"><%$value.number%></div>
                 <div class="product-name"><%chinese ? $value.name : $value.englishName%></div>
-                <div class="div1">
+                <div class="product-item-content-right">
                     <div class="product-count">
                         <span>{{chinese ? "数量：" : "Quantity:"}}</span>
                         <input type="number" min="0" value="1">
@@ -584,10 +584,10 @@
             <div class="img-wrapper">
                 <img src="http://ohnpdrepj.bkt.clouddn.com/%E9%BB%98%E8%AE%A4%E4%BA%A7%E5%93%81.png" class="product-img">
             </div>
-            <div class="div">
+            <div class="product-item-content">
                 <div class="product-number"><%$value.englishName%></div>
                 <div class="product-name"><%$value.name%></div>
-                <div class="div1">
+                <div class="product-item-content-right">
                     <div class="product-count">
                         <span>{{chinese ? "数量：" : "Quantity:"}}</span>
                         <input type="number" min="0" value="1">
@@ -602,4 +602,4 @@
 </script>
 {{include "./footer"}}
 <script type="text/javascript" src="/js/quote.min.js"></script>
-{{include "../public/html-footer"}}
+{{include "./public/html-footer"}}

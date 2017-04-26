@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .dialog-overlay {
+            filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+            background-color: rgba(0, 0, 0, .4);
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: none;
+            z-index: 10000
+        }
+
+        .dialog-alert {
+            background-color: #fff;
+            width: 370px;
+            padding: 17px;
+            border-radius: 5px;
+            text-align: center;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -201px;
+            margin-top: -200px;
+            overflow: hidden;
+            display: none;
+            z-index: 99999
+        }
+
+        .dialog-btn {
+            background-color: #8CD4F5;
+            color: #fff;
+            border: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            font-size: 17px;
+            font-weight: 500;
+            border-radius: 5px;
+            padding: 10px 32px;
+            margin: 20px 0;
+            cursor: pointer
+        }
+
+        .dialog-btn:hover {
+            background-color: #7ecff4
+        }
+
+        .dialog-img {
+            margin: 30px 0;
+        }
+
+        @media (max-width: 540px) {
+            .dialog-alert {
+                width: auto;
+                margin-left: 0;
+                margin-right: 0;
+                left: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dialog">
+
+        <div class="dialog-overlay" tabindex="-1" style="opacity: 1; display: block;"></div>
+        <div class="dialog-alert showDialogAlert" style="display: block; margin-top: -176px;">
+            <div class="dialog-img">
+                <img width="50%" src="//ohnpdrepj.bkt.clouddn.com/star-succeed.png">
+            </div>
+            <div>
+                收藏商品成功！
+            </div>
+            <button class="dialog-btn" onclick="hideDialog">OK</button>
+        </div>
+    </div>
+<script>
+    function hideDialog () {
+        console.log('test')
+    }
+</script>
+</body>
+
+</html>

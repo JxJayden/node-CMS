@@ -1,4 +1,3 @@
-<link href="/css/nav.min.css" rel="stylesheet">
 <div class="pc-navbar">
     <div class="nav">
         <div class="nav-container">
@@ -18,13 +17,13 @@
                 <div class="clear"></div>
             </ul>
             <div class="toggle-language">
-                <a data-language="cn" class="select-language {{chinese ? "select" : ""}}" alt="切换到中文">中</a>
+                <a data-language="cn" class="select-language {{chinese ? "select-language-acitve" : ""}}" alt="切换到中文">中</a>
                 <span>|</span>
-                <a data-language="en" class="select-language {{chinese ? "" : "select"}}" alt="switch language to English">EN</a>
+                <a data-language="en" class="select-language {{chinese ? "" : "select-language-acitve"}}" alt="switch language to English">EN</a>
             </div>
             <a href="javascript:void(0)" class="love pc-love"><i class="love-icon iconfont">&#xe6c2;</i> {{chinese ? "我的询单" : "My Quote"}}</a>
             <div class="search-content">
-                <input id="search" class="search" name="" value="" placeholder="{{chinese ? navBar.placeholder.content : navBar.placeholder.contentEn }}">
+                <input class="search" name="" value="" placeholder="{{chinese ? navBar.placeholder.content : navBar.placeholder.contentEn }}">
                 <a href="javascript:void(0)" class="iconfont to-search" id="startPcSearch">&#xe651;</a>
             </div>
             <div class="clear"></div>
@@ -94,9 +93,8 @@
             <li class="item"><a href="/support.html{{chinese ? "" : "?language=en"}}">{{chinese ? "支持" : "Support"}}</a></li>
             <li class="item"><a href="/contactus.html{{chinese ? "" : "?language=en"}}">{{chinese ? "联系我们" : "Contact Us"}}</a></li>
             <li class="item search-content">
-                <a href="javascript:void(0)" class="open-mobile-search">{{chinese ? "搜索" : "Search"}}</a>
-                <div class="search" >
-                    <input id="search" name="" placeholder="{{chinese ? navBar.placeholder.content : navBar.placeholder.contentEn }}">
+                <div class="mobile-search">
+                    <input class="search" name="" placeholder="{{chinese ? navBar.placeholder.content : navBar.placeholder.contentEn }}">
                     <a href="javascript:void(0)" class="iconfont to-search" id="startMobileSearch">&#xe651;</a>
                 </div>
             </li>

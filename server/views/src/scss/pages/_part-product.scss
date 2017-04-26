@@ -1,0 +1,139 @@
+@import
+    '../base/_base',
+    '../base/_reset';
+
+@import
+    '../components/_card',
+    '../components/_dialog';
+
+.content-container {
+    width: 100%;
+    .head-container {
+        width: 100%;
+        background-color: $grey;
+    }
+    .main-container {
+        width: 100%;
+    }
+}
+
+@include respond-to('large') {
+    .head-container {
+        height: 164px;
+        .head {
+            width: 1190px;
+            height: inherit;
+            margin: 0 auto;
+            .head-title {
+                padding-top: 48px;
+                padding-left: 50px;
+                line-height: 25px;
+                font-size: 30px;
+                color: $blue;
+            }
+            .breadcrumbs {
+                padding: 10px 0 0 50px;
+                font-size: 16px;
+                span {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    .main-container {
+        .main {
+            width: 1190px;
+            margin: 0 auto;
+            .tab {
+                width: 100%;
+                text-align: center;
+                padding-top: 17px;
+                .tab-item {
+                    display: inline-block;
+                    width: 180px;
+                    height: 40px;
+                    line-height: 40px;
+                    margin: 0 50px 17px 50px;
+                    color: $blue;
+                    font-size: 14px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.2);
+                    transition: all .5s ease;
+                    text-transform: uppercase;
+                    &:hover {
+                        background-color: $blue;
+                        color: $white;
+                    }
+                }
+                .item-select {
+                    background-color: $blue;
+                    color: $white;
+                }
+            }
+            .card {
+                display: none;
+            }
+            .card-show {
+                display: block;
+            }
+        }
+    }
+}
+
+@include respond-to('<large') {
+    .head {
+        margin-top: 55px;
+        width: 100%;
+        height: 56.4px;
+        line-height: 56.4px;
+        text-align: center;
+        .head-title {
+            color: $blue;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .breadcrumbs {
+            display: none;
+        }
+    }
+    .main {
+        margin-top: 20px;
+        width: 100%;
+        .tab {
+            padding: 16px 8px;
+            text-align: center;
+            .tab-item {
+                width: 90px;
+                height: 36px;
+                display: inline-block;
+                margin: 0px 11.5px 8px 11.5px;
+                text-align: center;
+                line-height: 36px;
+                color: $blue;
+                font-size: 12px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+        .card {
+            display: none;
+        }
+        .card-show {
+            display: block;
+        }
+    }
+    .main-container {
+        .main {
+            .tab {
+                .item-select {
+                    background-color: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,237 @@
+.card-star-hide {
+    display: none;
+}
+
+@include respond-to('large') {
+    .card {
+        width: 100%;
+        padding-left: 10px;
+        text-align: left;
+        padding-top: 36px;
+        &-item {
+            text-align: justify;
+            display: inline-block;
+            position: relative;
+            z-index: 40;
+            width: 330px;
+            height: 400px;
+            margin: 0 26px 46px 26px;
+            overflow: hidden;
+            box-shadow: 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.3);
+            &:hover {
+                box-shadow: 0.5px 0.5px 3px 1px rgba(0, 0, 0, 0.3);
+            }
+        }
+        &-cover-hide {
+            top: -400px !important;
+        }
+        &-cover {
+            box-sizing: content-box;
+            position: absolute;
+            height: 380px;
+            width: 300px;
+            top: 0px;
+            padding: 10px 15px;
+            background-color: $white;
+            -webkit-transition: top 0.5s;
+            transition: top 0.5s;
+            z-index: 42;
+        }
+        &-cover-title {
+            text-align: left;
+            font-size: 20px;
+            width: 90%;
+            line-height: 33px;
+            margin-bottom: 7px;
+        }
+        &-close-cover {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            &:hover {
+                color: $blueHover;
+                font-weight: 500;
+            }
+        }
+        &-des {
+            text-align: left;
+            width: 100%;
+            height: 340px;
+            overflow: auto;
+        }
+        &-img-container {
+            width: inherit;
+            height: 290px;
+            overflow: hidden;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            background-color: $grey;
+            img {
+                width: 100%;
+                height: inherit;
+                vertical-align: middle;
+            }
+        }
+        &-info-container {
+            width: 300px;
+            margin: 14px auto 0px auto;
+        }
+        &-number,
+        &-name,
+        &-img-more {
+            width: 233px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            float: left;
+        }
+        &-img-more {
+            cursor: pointer;
+            &:hover {
+                color: $blueHover;
+            }
+            a {
+                display: none;
+            }
+        }
+        &-more,
+        &-star {
+            width: 50px;
+            height: 30px;
+            float: right;
+            text-align: right;
+            font-size: 20px;
+            &:hover {
+                color: $blueHover;
+            }
+        }
+        &-star {
+            margin-top: 20px;
+        }
+    }
+    #star-on {
+        color: $blue;
+    }
+}
+
+@include respond-to('<large') {
+    .card {
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        overflow: auto;
+        padding-bottom: 18px;
+        &-item {
+            position: relative;
+            display: inline-block;
+            width: 288px;
+            height: 325px;
+            overflow: hidden;
+            margin: 0 9.5px 19px 9.5px;
+            box-shadow: 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.3);
+            &:hover {
+                box-shadow: 0.5px 0.5px 3px 1px rgba(0, 0, 0, 0.3);
+            }
+        }
+        &-cover-hide {
+            top: -325px !important;
+        }
+        &-cover {
+            box-sizing: content-box;
+            position: absolute;
+            height: 305px;
+            width: 256px;
+            top: 0px;
+            padding: 10px 15px;
+            background-color: $white;
+            -webkit-transition: top 0.5s;
+            transition: top 0.5s;
+            z-index: 42;
+        }
+        &-cover-title {
+            text-align: left;
+            font-size: 18px;
+            width: 90%;
+            line-height: 33px;
+            margin-bottom: 7px;
+        }
+        &-close-cover {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            &:hover {
+                color: $blueHover;
+                font-weight: 500;
+            }
+        }
+        &-des {
+            text-align: left;
+            width: 100%;
+            height: 340px;
+            overflow: auto;
+        }
+        &-img-container {
+            width: inherit;
+            overflow: hidden;
+            height: 216px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            background-color: $grey;
+            img {
+                width: 80%;
+                height: inherit;
+                vertical-align: middle;
+            }
+        }
+        &-info-container {
+            height: 80px;
+            padding: 20px 10px 0px 10px;
+        }
+        &-number,
+        &-name,
+        &-img-more {
+            width: 200px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            float: left;
+            text-align: left;
+        }
+        &-img-more {
+            cursor: pointer;
+            &:hover {
+                color: $blueHover;
+            }
+            a {
+                display: none;
+            }
+        }
+        &-more,
+        &-star {
+            width: 50px;
+            height: 30px;
+            float: right;
+            text-align: right;
+            font-size: 20px;
+            &:hover {
+                color: $blueHover;
+            }
+        }
+        &-star {
+            margin-top: 20px;
+        }
+    }
+    #star-on {
+        color: $blue;
+    }
+}
